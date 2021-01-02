@@ -1,0 +1,49 @@
+﻿<Window x:Class="TaskManager.TaskDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        mc:Ignorable="d"
+        Title="TaskDialogWindow" Height="450" Width="800">
+    <Grid Margin="50">
+        
+        <Label Content="Task name:" VerticalAlignment="Center" Grid.Row="0"/>
+        <TextBox x:Name="TaskNameTextBox" VerticalContentAlignment="Center" Grid.Column="1"/>
+
+        <Label Content="Frequency:" Grid.Row="1"/>
+        <TextBox x:Name="Amount" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+        <ComboBox x:Name="AmountType" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1">
+            <ComboBoxItem>Days</ComboBoxItem>
+            <ComboBoxItem>Weeks</ComboBoxItem>
+            <ComboBoxItem>Months</ComboBoxItem>
+            <ComboBoxItem>Years</ComboBoxItem>
+        </ComboBox>
+
+        <Label Content="Due date:" Grid.Row="3"/>
+        <Calendar x:Name="DueDateButton" Grid.Column="1" Grid.Row="3"/>
+
+        <Label Content="Repeatings:" Grid.Row="4"/>
+        <TextBox x:Name="RepeatingsTextBox" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1"/>
+
+        <Button x:Name="OkButton" Content="Ok" Grid.Row="5"/>
+
+        <Button x:Name="CancelButton"
+                    Content="Cancel"
+                    Grid.Row="5" Grid.Column="1"/>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>

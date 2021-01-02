@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="TaskManager.GoalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskManager"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="100"
+             HorizontalAlignment="Stretch"
+             HorizontalContentAlignment="Stretch">
+    <Grid HorizontalAlignment="Stretch">
+        <Button x:Name="GoalText"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"/>
+        <Button x:Name="AddTaskButton"
+                Grid.Column="1">
+            <Image Source="plus.png"
+                   Margin="2"/>
+        </Button>
+        <Button x:Name="DeleteImageButton"
+                Grid.Column="2">
+            <Image x:Name="DeleteImage" Source="garbage.png" Height="20" Width="20"/>
+        </Button>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</UserControl>
